@@ -2112,10 +2112,10 @@ export class UiManager {
             });
             if (statusChange) {
                 teamStatus.attr("class", "ui-team-member-status");
-                if (status.disconnected) {
-                    teamStatus.addClass("ui-team-member-status-disconnected");
-                } else if (status.dead) {
+                if (status.dead) {
                     teamStatus.addClass("ui-team-member-status-dead");
+                } else if (status.disconnected) {
+                    teamStatus.addClass("ui-team-member-status-disconnected");
                 } else if (status.downed) {
                     teamStatus
                         .addClass("ui-team-member-status-downed")
